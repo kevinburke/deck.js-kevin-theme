@@ -1,0 +1,148 @@
+@import 'colors.scss';
+
+@import url(http://fonts.googleapis.com/css?family=Oxygen:400,300,700);
+
+.deck-container {
+    font-family: 'Oxygen', 'Ubuntu', 'Helvetica Neue', Helvetica, arial, sans-serif;
+    background:#fff;
+
+    .slide {
+        background:#fff;
+
+        h1 {
+            color: $alternate-text-color;
+        }
+
+        h2 {
+            color: $turquoise;
+            border-bottom-color:#ccc;
+        }
+
+        h3 {
+            color:#888;
+        }
+
+        pre {
+            border-color:#ccc;
+            background-color: $dark-blue;
+            border-radius: 10px;
+            color: #fff;
+        }
+
+        pre, code {
+            font-family: Consolas, Menlo, Andale Mono, Monaco, monospace;
+            font-size: 1.2em;
+        }
+
+        blockquote {
+            font-size: 2em;
+            font-style: italic;
+            padding: 1em 2em;
+            color: $alternate-text-color;
+            border-left: 5px solid #ccc;
+
+            p {
+                margin: 0;
+            }
+
+            cite {
+                font-size:.5em;
+                font-style:normal;
+                font-weight:bold;
+                color:#888;
+            }
+        }
+
+        ::-moz-selection {
+            background: $list-color-1;
+            text-shadow: none;
+        }
+
+        ::selection {
+            background: $list-color-1;
+            text-shadow: none;
+        }
+
+        a {
+            &, &:hover, &:focus, &:active, &:visited {
+                color: $turquoise;
+                text-decoration: none;
+            }
+
+            &:hover, &:focus {
+                text-decoration:underline;
+            }
+        }
+    }
+
+    > .slide {
+        .deck-before, .deck-previous {
+            opacity:0.4;
+
+            &:not(.deck-child-current) {
+                .deck-before, .deck-previous {
+                    opacity:1;
+                }
+            }
+        }
+
+        .deck-child-current {
+            opacity:1;
+        }
+    } 
+
+    .deck-prev-link, .deck-next-link {
+        background:#ccc;
+        font-family:serif; // sans-serif arrows x-browser fail
+
+        &, &:hover, &:focus, &:active, &:visited {
+            color:#fff;
+        }
+
+        &:hover, &:focus {
+            background:#c00;
+            text-decoration:none;
+        }
+    }
+
+    .deck-status {
+        font-size:0.6666em;
+    }
+
+    &.deck-menu {
+        .slide {
+            background:#eee;
+        }
+
+        .deck-current, .no-touch & .slide:hover {
+            background:#ddf;
+        }
+    }
+}
+
+.deck-container .slide .CodeMirror-gutter {
+    background: $dark-blue;
+    font-family: Consolas, Menlo, Andale Mono, Monaco, monospace;
+    border-right: none;
+    display: none;
+}
+
+.deck-container .slide .CodeMirror {
+    border-radius: 8px;
+    padding: 0 10px;
+    background: $dark-blue;
+    font-family: Consolas, Menlo, Andale Mono, Monaco, monospace;
+
+    .cm-keyword, .cm-variable, .cm-variable-2 {
+        color: $orange;
+    }
+
+    .cm-string, .cm-number {
+        color: $turquoise;
+    }
+
+    .cm-property, .cm-def, .cm-atom {
+        color: $top-color;
+    }
+}
+
