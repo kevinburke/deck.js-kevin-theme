@@ -4,18 +4,20 @@
 
 .deck-container {
     font-family: 'Oxygen', 'Ubuntu', 'Helvetica Neue', Helvetica, arial, sans-serif;
-    background:#fff;
+    background: #fff;
 
     .slide {
-        background:#fff;
+        background: #fff;
 
         h1 {
             color: $alternate-text-color;
+            font-size: 2em;
         }
 
         h2 {
-            color: $turquoise;
+            color: $orange;
             border-bottom-color:#ccc;
+            font-size: 1.5em;
         }
 
         h3 {
@@ -65,7 +67,7 @@
 
         a {
             &, &:hover, &:focus, &:active, &:visited {
-                color: $turquoise;
+                color: $orange;
                 text-decoration: none;
             }
 
