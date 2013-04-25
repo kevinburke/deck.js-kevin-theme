@@ -6,22 +6,28 @@
     font-family: 'Oxygen', 'Ubuntu', 'Helvetica Neue', Helvetica, arial, sans-serif;
     background: #fff;
 
+    li, p {
+        font-size: 2rem;
+    }
+
     .slide {
         background: #fff;
 
         h1 {
             color: $alternate-text-color;
-            font-size: 2em;
+            font-size: 5rem;
         }
 
         h2 {
             color: $orange;
             border-bottom-color:#ccc;
-            font-size: 1.5em;
+            font-size: 3.3rem;
         }
 
         h3 {
             color:#888;
+            margin-bottom: 20px;
+            font-size: 2.3rem;
         }
 
         pre {
@@ -120,6 +126,10 @@
             background:#ddf;
         }
     }
+
+    .start-hidden {
+        display: none;
+    }
 }
 
 .deck-container .slide .CodeMirror-gutter {
@@ -131,7 +141,8 @@
 
 .deck-container .slide .CodeMirror {
     border-radius: 8px;
-    padding: 0 10px;
+    padding: 10px;
+    font-size: 1.6rem;
     background: $dark-blue;
     font-family: Consolas, Menlo, Andale Mono, Monaco, monospace;
 
