@@ -163,6 +163,16 @@
             }
         }
     }
+
+    .image-overlay {
+        position: relative;
+    }
+
+    #result-1 {
+        position: absolute;
+        top: 30%;
+    }
+
 }
 
 .deck-container .slide .CodeMirror-gutter {
@@ -189,6 +199,10 @@
 
     .cm-property, .cm-def, .cm-atom {
         color: $top-color;
+    }
+
+    pre {
+        padding: 2px 0;
     }
 }
 
