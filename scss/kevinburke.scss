@@ -1,4 +1,4 @@
-@import 'colors.scss';
+@import '/Users/kevin/code/flat-ui/scss/colors.scss';
 
 @import url(http://fonts.googleapis.com/css?family=Oxygen:400,300,700);
 
@@ -16,6 +16,15 @@
         h1 {
             color: $alternate-text-color;
             font-size: 5rem;
+
+            a, a:visited {
+                color: $alternate-text-color;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
         }
 
         h2 {
@@ -62,12 +71,12 @@
         }
 
         ::-moz-selection {
-            background: $list-color-1;
+            background: $dark-blue;
             text-shadow: none;
         }
 
         ::selection {
-            background: $list-color-1;
+            background: $dark-blue;
             text-shadow: none;
         }
 
@@ -130,6 +139,30 @@
     .start-hidden {
         display: none;
     }
+
+    #documentation-reader {
+        background: url('/slides/images/birds.jpg') no-repeat center center fixed;
+
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        $blur: 5px;
+        $border: 4px;
+        h1, h5 {
+            text-shadow: $border 0 $blur white, 0 $border $blur white, - $border 0 $blur white, 0px  (-$border) $blur white;
+        }
+
+        #frenzy-link {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            a {
+                color: black;
+            }
+        }
+    }
 }
 
 .deck-container .slide .CodeMirror-gutter {
@@ -157,5 +190,15 @@
     .cm-property, .cm-def, .cm-atom {
         color: $top-color;
     }
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
 }
 
