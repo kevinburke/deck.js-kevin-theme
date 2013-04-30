@@ -59,7 +59,7 @@ html, body {
 
         pre, code {
             font-family: Consolas, Menlo, Andale Mono, Monaco, monospace;
-            font-size: 1.2em;
+            font-size: 3rem;
         }
 
         blockquote {
@@ -172,6 +172,11 @@ html, body {
                 color: black;
             }
         }
+    }
+
+    #command-not-found .CodeMirror {
+        font-size: 3rem;
+
     }
 
     .image-overlay {
