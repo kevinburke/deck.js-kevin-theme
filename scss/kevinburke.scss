@@ -2,28 +2,33 @@
 
 @import url(http://fonts.googleapis.com/css?family=Oxygen:400,300,700);
 
+html, body {
+    background: $dark-blue;
+    color: #fff;
+}
+
 .deck-container {
+
+    background: $dark-blue;
+    color: #fff;
 
     b, strong {
         font-weight: bold;
     }
 
     font-family: 'Oxygen', 'Ubuntu', 'Helvetica Neue', Helvetica, arial, sans-serif;
-    background: #fff;
 
     li, p {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .slide {
-        background: #fff;
+        background: $dark-blue;
 
         h1 {
-            color: $alternate-text-color;
             font-size: 5rem;
 
             a, a:visited {
-                color: $alternate-text-color;
 
                 &:hover {
                     text-decoration: none;
@@ -42,14 +47,14 @@
         h3 {
             color:#888;
             margin-bottom: 20px;
-            font-size: 2.3rem;
+            font-size: 3rem;
         }
 
         pre {
-            border-color:#ccc;
-            background-color: $dark-blue;
+            border-color: #ccc;
             border-radius: 10px;
-            color: #fff;
+            color: $alternate-text-color;
+            background-color: #fff;
         }
 
         pre, code {
@@ -58,10 +63,9 @@
         }
 
         blockquote {
-            font-size: 2em;
+            font-size: 2.5rem;
             font-style: italic;
             padding: 1em 2em;
-            color: $alternate-text-color;
             border-left: 5px solid #ccc;
 
             p {
@@ -179,10 +183,15 @@
         top: 30%;
     }
 
+    // XXX fix this
+    #usability-reasons li {
+        font-size: 3rem;
+        margin-left: 80px;
+    }
 }
 
 .deck-container .slide .CodeMirror-gutter {
-    background: $dark-blue;
+    background: #fff;
     font-family: Consolas, Menlo, Andale Mono, Monaco, monospace;
     border-right: none;
     display: none;
@@ -191,20 +200,28 @@
 .deck-container .slide .CodeMirror {
     border-radius: 8px;
     padding: 10px;
-    font-size: 1.6rem;
-    background: $dark-blue;
+    font-size: 2rem;
+    background: #fff;
     font-family: Consolas, Menlo, Andale Mono, Monaco, monospace;
 
     .cm-keyword, .cm-variable, .cm-variable-2 {
-        color: $orange;
+        color: $red;
     }
 
-    .cm-string, .cm-number {
+    .cm-string, .cm-number, .cm-word {
         color: $turquoise;
     }
 
     .cm-property, .cm-def, .cm-atom {
-        color: $top-color;
+        color: $purple;
+    }
+
+    .cm-operator, .cm-null {
+        color: $alternate-text-color;
+    }
+
+    .cm-comment {
+        color: $purple;
     }
 
     pre {
