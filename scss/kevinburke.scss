@@ -1,4 +1,4 @@
-@import '/Users/kevin/code/2013/scss/colors.scss';
+@import '/Users/kevin/src/github.com/kevinburke/2013/scss/colors.scss';
 
 @import url(https://fonts.googleapis.com/css?family=Oxygen:400,300,700);
 
@@ -8,7 +8,6 @@ html, body {
 }
 
 .deck-container {
-
     background: $dark-blue;
     color: #fff;
 
@@ -24,17 +23,12 @@ html, body {
 
     .slide {
         background: $dark-blue;
-
         h1 {
-            font-size: 3rem;
-
             a, a:visited {
-
                 &:hover {
                     text-decoration: none;
                 }
             }
-
         }
 
         h2 {
@@ -58,7 +52,7 @@ html, body {
         }
 
         pre, code {
-            font-family: Consolas, Menlo, Andale Mono, Monaco, monospace;
+            font-family: Consolas, Menlo, "Andale Mono", Monaco, monospace;
             font-size: 2rem;
         }
 
@@ -249,3 +243,6 @@ html, body {
     clear: both;
 }
 
+.five {
+    font-size: 5rem;
+}
