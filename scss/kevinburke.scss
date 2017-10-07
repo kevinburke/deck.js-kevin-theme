@@ -18,7 +18,7 @@ html, body {
     font-family: 'Oxygen', 'Ubuntu', 'Helvetica Neue', Helvetica, arial, sans-serif;
 
     li, p {
-        font-size: 2rem;
+        font-size: 3.5rem;
     }
 
     .slide {
@@ -34,7 +34,7 @@ html, body {
         h2 {
             color: #ea4;
             border-bottom-color:#ccc;
-            font-size: 2.5rem;
+            font-size: 3.5rem;
             padding-top: 0.1em;
         }
 
@@ -57,7 +57,7 @@ html, body {
         }
 
         blockquote {
-            font-size: 2rem;
+            font-size: 3.5rem;
             font-style: italic;
             padding: 0.5em 1em;
             border-left: 5px solid #ccc;
@@ -93,6 +93,17 @@ html, body {
             &:hover, &:focus {
                 text-decoration:underline;
             }
+        }
+
+        .full-image {
+            min-height: 100vh;
+            max-height: 100vh;
+            display: flex;
+        }
+
+        img {
+            object-fit: contain;
+            min-width: 90%;
         }
     }
 
